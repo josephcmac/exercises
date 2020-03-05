@@ -104,9 +104,9 @@ thm arith_geo_mean_sqrt (* ctrl + clic here in order to do reverse engineering i
   where sqrt is my_sqrt *)
 
 lemma ex12:
-  fixes x y z t::real
-  assumes \<open>x \<ge> 0\<close> and \<open>y \<ge> 0\<close> and \<open>z \<ge> 0\<close> and \<open>t \<ge> 0\<close>
-  shows \<open>my_sqrt (my_sqrt (x*y*z*t)) \<le> (x + y + z + t)/4\<close>
+  fixes x y z::real
+  assumes \<open>x \<ge> 0\<close> and \<open>y \<ge> 0\<close> and \<open>z \<ge> 0\<close>
+  shows \<open>sqrt(x*y*z) \<le> (x + y + z)/2\<close>
     (* Try to do this one without reverse engineering *)
   sorry
 
